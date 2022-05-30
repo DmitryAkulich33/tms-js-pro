@@ -56,10 +56,10 @@ const users: Array<IUser> = [
     }
 ]
 // 1. Создать строку из имен пользователей через запятую
-const userNamesInLine = users.map((user: IUser): IUser["name"] => user.name).join(", ");
+const userNamesInLine: string = users.map((user: IUser): IUser["name"] => user.name).join(", ");
 
 // 2. Посчитать общее количнство машин у пользователей
-const userCarAmount = users.reduce((acc: number, user: IUser): number => user.cars ? acc + user.cars.length : acc, 0);
+const userCarAmount: number = users.reduce((acc: number, user: IUser): number => user.cars ? acc + user.cars.length : acc, 0);
 
 // 3. Создать функцию, которая бы принимала массив пользователей и отфильтровывала пользователей на наличие образования
 const filterUsersByEducation = (users: Array<IUser>): Array<IUser> => users.filter((user: IUser): boolean => user.hasEducation);
@@ -68,8 +68,8 @@ const filterUsersByEducation = (users: Array<IUser>): Array<IUser> => users.filt
 const filterUsersByAnimals = (users: Array<IUser>): Array<IUser> => users.filter((user: IUser): boolean => user.hasOwnProperty("animals"));
 
 // 5. Создать функцию, которая бы принимала массив пользователей и отдавала бы  строку с названиями марок автомобилей через запятую
-const getUserCarsInLine = (users: Array<IUser>): string => users.reduce((acc: Array<string>, user:IUser):Array<string> =>
+const getUserCarsInLine = (users: Array<IUser>): string => users.reduce((acc: Array<string>, user: IUser): Array<string> =>
     user.cars ? [...acc, ...user.cars] : acc, []).join(", ");
 
-const getUniqueUserCarsInLine = (users: Array<IUser>): string => users.reduce((acc: Array<string>, user:IUser):Array<string> =>
+const getUniqueUserCarsInLine = (users: Array<IUser>): string => users.reduce((acc: Array<string>, user: IUser): Array<string> =>
     user.cars ? Array.from(new Set([...acc, ...user.cars])) : acc, []).join(", ");
