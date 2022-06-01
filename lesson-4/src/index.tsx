@@ -244,4 +244,3 @@ const mapByLastName = (users: Array<IUser>): LastNameModel => users.reduce((acc:
     return acc.hasOwnProperty(key) ? {...acc, [key]: [...acc[key], lastName]} : {...acc, [key]: [lastName]};
 }, {})
 const newObj: Record<string, Array<string>> = mapByLastName(users);
-console.log(newObj);
