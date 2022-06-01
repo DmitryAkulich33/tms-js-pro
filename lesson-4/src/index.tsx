@@ -243,4 +243,4 @@ const mapByLastName = (users: Array<IUser>): LastNameModel => users.reduce((acc:
     const key = lastName.trim()[0].toLocaleLowerCase();
     return acc.hasOwnProperty(key) ? {...acc, [key]: [...acc[key], lastName]} : {...acc, [key]: [lastName]};
 }, {})
-const newObj: Record<string, Array<string>> = mapByLastName(users);
+const newObj: LastNameModel = mapByLastName(users);
