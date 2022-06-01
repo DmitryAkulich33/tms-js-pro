@@ -237,9 +237,11 @@ const userIdsAndFullNames = users.map((user) => ({id: user.id, fullName: `${user
 // *6. Создать объект, где ключ, это первая буква фамилии, а значение - массив из фамилий пользователей начинающихся на эту букву. Объект должен состоять только из ключей
 // существующих фамилий в этом массиве. Например в этом массиве нет фамилии с букву Y, а значит и такого поля не должно быть в объекте. Пример того, что надо получить,
 // когда пользователи имеют следующие фамилии Snow, Felton , Ford, Ferdinand: { s: [‘Snow’], f: ['Felton', 'Ford', 'Ferdinand' }
-const mapByLastName = (users: Array<IUser>): Record<string, Array<string>> => users.reduce((acc: any, user: IUser) => {
+type LastNameModel = Record<string, Array<string>>;
+const mapByLastName = (users: Array<IUser>): LastNameModel => users.reduce((acc: LastNameModel, user: IUser) => {
     const {last_name: lastName} = user;
     const key = lastName.trim()[0].toLocaleLowerCase();
     return acc.hasOwnProperty(key) ? {...acc, [key]: [...acc[key], lastName]} : {...acc, [key]: [lastName]};
 }, {})
 const newObj: Record<string, Array<string>> = mapByLastName(users);
+console.log(newObj);
