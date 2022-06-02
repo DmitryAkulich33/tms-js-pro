@@ -1,0 +1,47 @@
+.menu {
+  background: dodgerblue;
+  display: flex;
+  justify-content: space-between;
+  &-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 35px 15px;
+    width: 100%;
+    .menu-list {
+      display: flex;
+      &-item {
+        margin-right: 20px;
+        cursor: pointer;
+        a {
+          margin-right: 20px;
+          color: white;
+          font-size: 16px;
+          font-weight: bold;
+        }
+      }
+    }
+    .log-out {
+      color: white;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: bold;
+    }
+  }
+  .close {
+    color: white;
+    cursor: pointer;
+    margin-right: 5px;
+    margin-top: 5px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+

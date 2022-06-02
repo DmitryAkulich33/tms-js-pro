@@ -1,0 +1,27 @@
+.user-info {
+  display: flex;
+  align-items: center;
+  margin-left: 40px;
+
+  .user-icon {
+    margin-right: 15px;
+    height: 30px;
+    width: 30px;
+
+    img {
+      width: 100%;
+      background: dodgerblue;
+    }
+  }
+
+  .user-name {
+    font-size: 24px;
+    font-weight: bold;
+    color: dodgerblue;
+  }
+}
+
+
+
+
+
