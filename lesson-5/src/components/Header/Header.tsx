@@ -10,12 +10,10 @@ interface IHeader {
 }
 
 const Header: React.FC<IHeader> = ({userName, menuItems}) => {
-    const[isMenuExpanded, setMenuExpanded] = useState(false);
-    const[isUserExpanded, setUserExpanded] = useState(false);
+    const[isExpanded, setExpanded] = useState(false);
 
     const handleMenuOnClick = () => {
-        setMenuExpanded(!isMenuExpanded);
-        setUserExpanded(!isUserExpanded);
+        setExpanded(!isExpanded);
     }
 
     return (
@@ -23,9 +21,9 @@ const Header: React.FC<IHeader> = ({userName, menuItems}) => {
             <div className='container'>
                 <div className='header-row'>
                     <BurgerMenu burgerMenuOnClickHandler={handleMenuOnClick}/>
-                    {isUserExpanded ? <User userName={userName}/> : null}
+                    {isExpanded ? <User userName={userName}/> : null}
                 </div>
-                {isMenuExpanded ? <Menu items={menuItems} closeMenuOnClick={handleMenuOnClick}/> : null}
+                {isExpanded ? <Menu items={menuItems} closeMenuOnClick={handleMenuOnClick}/> : null}
             </div>
         </header>
     )
