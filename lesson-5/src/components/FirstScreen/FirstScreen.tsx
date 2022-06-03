@@ -9,7 +9,7 @@ interface IFirstScreen {
 
 const FirstScreen: React.FC<IFirstScreen> = ({btnTitle, btnDisabled}) => {
     return (
-        <div className="first-screen">
+        <section className="first-screen">
             <div className="container">
                 <div className="first-screen-content">
                     <h1>Make you Blog <span>Online</span></h1>
@@ -20,7 +20,7 @@ const FirstScreen: React.FC<IFirstScreen> = ({btnTitle, btnDisabled}) => {
                     <Button title={btnTitle} disabled={btnDisabled}/>
                 </div>
             </div>
-        </div>
+        </section>
 
     )
 }

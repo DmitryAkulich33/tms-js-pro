@@ -8,11 +8,11 @@ interface IUserProps {
 
 const User: React.FC<IUserProps> = ({userName}) => {
     return (
-        <div className="user-info hidden-state">
+        <div className="user-info">
             <div className="user-icon">
                 <img src={userIcon} alt="user-icon"/>
             </div>
-            <div className="user-name">{userName}</div>
+          <div className="user-name">{userName}</div>
         </div>
     )
 }
