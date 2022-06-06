@@ -1,6 +1,6 @@
 import React from "react";
 import "./FirstScreen.scss"
-import Button from "../Button/Button";
+import Button from "../../Button/Button";
 
 interface IFirstScreen {
     btnTitle: string;

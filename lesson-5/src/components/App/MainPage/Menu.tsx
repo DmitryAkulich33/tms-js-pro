@@ -13,7 +13,7 @@ const Menu: React.FC<IMenu> = ({items, closeMenuOnClick}) => {
                 <div className="menu-row">
                     <ul className="menu-list">
                         {items.map((item, index) =>
-                            <li className="menu-list-item" key={index} id={`menu-item_${index}`}>
+                            <li className="menu-list-item" key={item} id={`menu-item_${index}`}>
                                 <a href="src/components/MainPage/Menu#">{item}</a>
                             </li>)}
                     </ul>
