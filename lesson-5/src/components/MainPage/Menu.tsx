@@ -14,7 +14,7 @@ const Menu: React.FC<IMenu> = ({items, closeMenuOnClick}) => {
                     <ul className="menu-list">
                         {items.map((item, index) =>
                             <li className="menu-list-item" key={index} id={`menu-item_${index}`}>
-                                <a href="#">{item}</a>
+                                <a href="src/components/MainPage/Menu#">{item}</a>
                             </li>)}
                     </ul>
                     <div className="log-out">

@@ -1,6 +1,6 @@
 import React from "react";
-import Header from "../Header/Header";
-import FirstScreen from "../FirstScreen/FirstScreen";
+import Header from "./Header";
+import FirstScreen from "./FirstScreen";
 
 const MainPage = () => {
     return (

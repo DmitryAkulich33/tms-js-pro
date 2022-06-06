@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import './Header.scss'
 import User from "../User/User";
 import BurgerMenu from "../BurgerMenu/BurgerMenu";
-import Menu from "../Menu/Menu";
+import Menu from "./Menu";
 
 interface IHeader {
     userName: string;
