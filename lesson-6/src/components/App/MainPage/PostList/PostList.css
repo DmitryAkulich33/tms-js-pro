@@ -1,0 +1,10 @@
+.post-list-content {
+    padding: 20px;
+}
+
+.post-card-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
