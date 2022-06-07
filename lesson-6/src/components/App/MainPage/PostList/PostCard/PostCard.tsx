@@ -14,7 +14,7 @@ export const PostCard: React.FC<IPostCard> = ({id, image, text, date, title}) =>
 
     const renderExpandedCard = () => {
         return (
-            <li className={"post-card_expanded"} key={id} id={`post-card_${id}`}>
+            <li className={"post-card_expanded"} id={`post-card_${id}`}>
                 <div className={"post-card-left-column"}>
                     <div className={"post-card-date_expanded"}>{date}</div>
                     <h3 className={"post-card-title_expanded"} onClick={onCLickHandler}>{title}</h3>

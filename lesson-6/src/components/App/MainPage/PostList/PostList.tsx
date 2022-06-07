@@ -12,7 +12,7 @@ const PostList: React.FC<IPostList> = ({postCards}) => {
         <div className={"post-list-content"}>
             <ul className={"post-card-list"}>
                 {postCards.map(card =>
-                    <PostCard id={card.id} image={card.image} title={card.title} date={card.date} text={card.text}/>)}
+                    <PostCard key={card.id} id={card.id} image={card.image} title={card.title} date={card.date} text={card.text}/>)}
             </ul>
         </div>
     )
